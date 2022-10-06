@@ -3,7 +3,7 @@ from flask import request
 
 import ibm_db
 
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=3883e7e4-18f5-4afe-be8c-fa31c41761d2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;SECURITY=SSL;PORT=31498;PROTOCOL=TCPIP;UID=nnm68033;PWD=DUTMGiDWgJy5zlS8",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=###########################;SECURITY=SSL;PORT=31498;PROTOCOL=TCPIP;UID=########;PWD=#######",'','')
 
 print(conn)
 

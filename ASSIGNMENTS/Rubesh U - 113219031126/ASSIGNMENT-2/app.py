@@ -3,7 +3,7 @@ from flask import request
 
 import ibm_db
 
-conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=###########################;SECURITY=SSL;PORT=31498;PROTOCOL=TCPIP;UID=########;PWD=#######",'','')
+conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=3883e7e4-18f5-4afe-be8c-fa31c41761d2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;SECURITY=SSL;PORT=31498;PROTOCOL=TCPIP;UID=nnm68033;PWD=DUTMGiDWgJy5zlS8",'','')
 
 print(conn)
 
@@ -60,6 +60,20 @@ def checkCred():
         return {'message':'success'}
     else:
         return {'message': 'failure'}
+
+
+@app.route('/check')
+
+def check():
+
+    name = request.args.get("name")
+    password = request.args.get("password")
+    sql = "insert into users values(?,?);"
+    stmt = ibm_db.prepare(conn,sql)
+    ibm_db.bind_param(stmt,1,name)
+    ibm_db.bind_param(stmt,2,password)
+    ibm_db.execute(stmt)
+    return {'message' : 'success'}
 
 
 @app.route('/signup')

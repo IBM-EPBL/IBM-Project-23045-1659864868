@@ -47,7 +47,7 @@
                 await $.ajax({
                 type: 'get',
                 data: {'name': $("#exampleFormControlInput1").val(),'password':$('#exampleFormControlInput2').val()},
-                url: 'http://127.0.0.1:5000/checkcred',
+                url: 'http://127.0.0.1:5000/check',
                 traditional: true,
                 success: function (data) {
                     if(data.message=='success'){

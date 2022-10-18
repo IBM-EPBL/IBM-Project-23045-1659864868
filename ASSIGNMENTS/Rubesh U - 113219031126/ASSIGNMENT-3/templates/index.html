@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            IBM Object Storage
+        </title>
+        <link rel="stylesheet" href="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/index.css">
+    </head>
+    <body>
+        <a style="float:right;" href="https://api.au-syd.assistant.watson.cloud.ibm.com/instances/3b89fcd1-0be9-4167-9840-a77d7f0a9f7f">URL FOR HOSPITAL CHAT BOT</a>
+        <h1 id="heading1">Bucked created in IBM Object Storage</h1>
+        <h1 class="heading2">Accessing the 5 public images & a css page uploaded in IBM Object Storage</h1>
+        <p>Sunflower</p>
+        <img src="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/sunflower.jpg" alt="Sunflower">
+        <p>Rose</p>
+        <img src="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/rose.jpg" alt="Rose"> 
+        <p>Lily</p>
+        <img src="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/lily.jpg" alt="Lily">
+        <p>Daisy</p>
+        <img src="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/daisy.jpg" alt="Daisy">
+        <p>Camellia</p>
+        <img src="https://imagesobject.s3.jp-tok.cloud-object-storage.appdomain.cloud/camellia.jpg" alt="Camellia">
+    </body>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "e6c81fd0-9024-4804-8f2b-8d40fe0cd1c2", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "3b89fcd1-0be9-4167-9840-a77d7f0a9f7f", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</html>

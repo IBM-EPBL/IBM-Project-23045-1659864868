@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webpage
-          image: rajkiranss/flask
+          image: webapp/flask
           imagePullPolicy: Never
           ports:
             - containerPort: 5000

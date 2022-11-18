@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" href={{url_for('static', filename='styles/style.css')}}>
+</head>
+<body>
+<br>
+<br>
+    <div class="cont">
+        <i>
+        <div class="form sign-in">
+            <h2>Inventory</br>Management System</br></br></h2>
+            <p style="color:{{colour}};text-align:center;">{{status}}</p>
+            </br></br>
+            <form action="/" autocomplete="ON" method="POST">
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" required/>
+                </label>
+            </br></br>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" required/>
+            </label>
+            </br></br>  
+            <button type="submit" class="submit">Sign In</button>
+            </form>
+        </div>
+
+        
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up"> 
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__btn">
+                    <a href="/signup"><span>SignUp</span></a>
+                </div>
+            </div>
+        </div>
+        </i>
+    </div>
+</body>
+</html>

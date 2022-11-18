@@ -1,2 +1,0 @@
-flask
-ibm_db

@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: imsr
+spec:
+  selector:
+    app: imsr
+  ports:
+  - port: 5000
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imsr
+  labels:
+    app: imsr
+spec:
+  selector:
+    matchLabels:
+      app: imsr
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: imsr
+    spec:
+      containers:
+      - name: imsr
+        image: jp.icr.io/ns-imsr/rubesh507/imsr@sha256:c1b434937714ff257069cd41e280e6c615fa2f25978a025af3560b2251168d3f
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DISABLE_WEB_APP
+          value: "false"

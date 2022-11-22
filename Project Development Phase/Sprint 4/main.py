@@ -273,7 +273,7 @@ def view_sale():
 
 def alert_mail(cname,items,quantity):
     print(cname,items,quantity)
-    sg = sendgrid.SendGridAPIClient(api_key='SG.Z6VI5DEWSH2tZ6VI5DEWSH2t8vb1VN3f9LZiiIFBUlAHZxZSPo')
+    sg = sendgrid.SendGridAPIClient(api_key='SG.Z6VI5DEWSH2tZ6Z6VI5DEWSH2tZ6VI5DEWSH2tZ6VI5DEWSH2t')
     from_email = Email("rubeshstark53@gmail.com")
     global cusmail 
 

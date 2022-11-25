@@ -269,8 +269,6 @@ def view_sale():
         return render_template("Dashboard/view_sale.html",items=items)
 
 
-# API = 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
-
 def alert_mail(cname,items,quantity):
     print(cname,items,quantity)
     sg = sendgrid.SendGridAPIClient(api_key='SG.Z6VI5DEWSH2tZ6Z6VI5DEWSH2tZ6VI5DEWSH2tZ6VI5DEWSH2t')
